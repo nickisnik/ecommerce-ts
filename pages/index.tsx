@@ -4,7 +4,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
-  const productList = [1, 2, 3 ,4 ,5, 6]
+  const productList = [1, 2, 3 ,4 ,5, 6, 7, 8, 9, 10]
   const productHTML = productList.map((item: number, index) => {
     return (
       <div className='product-item' key={index}>

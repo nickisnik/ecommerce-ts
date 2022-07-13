@@ -24,7 +24,7 @@ a {
 }
 
 .home-wrapper {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
 
 }
@@ -94,8 +94,8 @@ a {
     position: relative;
     color: white;
     text-align: center;
-    font-size: 3rem;
-    line-height: 3rem;
+    font-size: clamp(2rem, 4rem, 12vw);
+    line-height: 1em;
     letter-spacing: 1px;
     font-weight: 700;
     z-index: 1;
@@ -112,21 +112,10 @@ a {
       filter: brightness(0.7);
     }
   }
-  /* .list-header::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    filter: blur(70px);
-    z-index: -1;
-    background-color: rgba(255, 204, 0, 0.667);
-  } */
+  
   .product-list {
-    align-items: center;
+    display: block;
     margin: 6.5rem auto;
-    justify-content: center;
     column-count: 2;
     width: min-content;
 
@@ -163,8 +152,8 @@ a {
       left: 7%;
       color: white;
       border-radius: 50%;
-      width: 8vw;
-      height: 8vw;
+      width: 2.5rem;
+      height: 2.5rem;
       padding: 0.2rem;
       box-sizing: border-box;
       text-align: center;
@@ -206,4 +195,55 @@ a {
       
     }
   }
+}
+
+@media only screen and (min-width: 650px) {
+  .product-list {
+    width: 100% !important;
+    display: flex !important;
+    justify-content: center;
+    height: fit-content;
+    margin: auto;
+    column-count: auto !important;
+    flex-wrap: wrap;
+    gap: 1rem;
+    /* column-count: auto;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(auto, 1fr); */
+
+    .product-item {
+      width: fit-content;
+      margin: 0;
+      .image-wrapper {
+        width: auto;
+        max-width: 250px;
+        height: auto;
+        margin: 0 auto;
+      }
+
+      .text-wrapper {
+        width: 80%;
+        margin: 1rem auto;
+        padding: 0;
+      }
+    }
+
+    .product-item:nth-child(1) {
+      margin: 0 !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .product-list {
+    gap: 2rem;
+
+    .text-wrapper {
+      font-size: 1rem;
+      .product-name {
+        font-size: 1.2em;
+      }
+    }
+  }
+
 }
