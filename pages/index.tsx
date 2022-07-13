@@ -5,9 +5,9 @@ import styles from '../styles/Home.module.scss'
 
 const Home: NextPage = () => {
   const productList = [1, 2, 3 ,4 ,5, 6]
-  const productHTML = productList.map((item: number) => {
+  const productHTML = productList.map((item: number, index) => {
     return (
-      <div className='product-item'>
+      <div className='product-item' key={index}>
         <div className='image-wrapper'>
           <img className='product-image' src="/example.jpg" alt="Img" />
           <div className="like-btn"><img src="/heart.svg" alt="heart" className='like-btn-svg'></img></div>
