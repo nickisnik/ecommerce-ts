@@ -1,0 +1,20 @@
+{ 
+"products": [
+    {
+        "name": "Pink sweater",
+        "subtitle": "ZARA | WOMEN",
+        "price": 30,
+        "id": "pink-sweater",
+        "imgURL": "/example.svg"
+    },
+    {
+        "name": "Pink sweater2",
+        "subtitle": "ZARA | WOMEN",
+        "price": 30,
+        "id": "pink-sweater2",
+        "imgURL": "/example.svg"
+    }
+]
+
+}
+
